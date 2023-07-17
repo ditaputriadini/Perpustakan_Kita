@@ -1,8 +1,25 @@
-{{-- @extends('layouts.app')
-@section('title', 'view_Home')
-
+@extends('layouts.app')
 @section('content')
-    <h3>Pengertian perpustakaan menurut para ahli</h3>
+@include('menu')
+<div class="container">
+    {{-- <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
+    </div> --}}
+<h3>Pengertian perpustakaan menurut para ahli</h3>
     <p>
     <h4>Perpustakaan</h4>
         Perpustakaan Perguruan Tinggi merupakan unit kerja pelaksana teknis (UPT) Perguruan Tinggi yang bersama-sama
@@ -28,5 +45,6 @@
     <h4>Perpustakaan Menurut UU NO 43. THN. 2007</h4>
     Perpustakaan adalah institusi yang mengumpulkan pengetahuan tercetak dan terekam, mengelolanya dengan cara khusus guna
     memenuhi kebutuhan intelektualitas para penggunanya melalui berbagai cara interaksi pengetahuan.
+</div>
 
-@endsection --}}
+@endsection

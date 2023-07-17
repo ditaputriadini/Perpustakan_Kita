@@ -1,7 +1,7 @@
-@extends('index')
+@extends('layouts.app')
 @section('title', 'Anggota')
-
-@section('isihalaman')
+@include('menu')
+@section('content')
     <h3><center>Daftar Anggota Perpustakaan Universitas Semarang</center></h3>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAnggotaTambah">

@@ -1,5 +1,5 @@
 <!--awal MENU NAVBAR-->
-<div>
+<div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div>
             <ul class="navbar-nav">

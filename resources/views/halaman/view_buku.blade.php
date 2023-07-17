@@ -1,10 +1,11 @@
-@extends('index')
+@extends('layouts.app')
+{{-- @extends('index') --}}
 @section('title', 'Buku')
-
-@section('isihalaman')
+@include('menu')
+@section('content')
     <h3><center>Daftar Buku Perpustakaan Kita</center></h3>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBukuTambah">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBukuTambah">
         Tambah Data Buku
     </button>
 
@@ -153,7 +154,7 @@
 
                         <p>
                         <div class="modal-footer">
-                            <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" name="bukutambah" class="btn btn-success">Tambah</button>
                         </div>
                     </form>
