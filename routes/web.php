@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
-
 //Route untuk Data Buku
 Route::get('/buku', 'BukuController@bukutampil');
 Route::post('/buku/tambah','BukuController@bukutambah');
@@ -24,7 +23,7 @@ Route::get('/buku/hapus/{id_buku}','BukuController@bukuhapus');
 Route::put('/buku/edit/{id_buku}', 'BukuController@bukuedit');
 
 //Route untuk Data Buku
-Route::get('/home', function(){return view('view_home');});
+Route::get('/home', function(){return view('home');});
 
 //Route untuk Data Anggota
 Route::get('/anggota', 'AnggotaController@anggotatampil');
@@ -44,3 +43,9 @@ Route::post('/pinjam/tambah','PinjamController@pinjamtambah');
 Route::get('/pinjam/hapus/{id_pinjam}','PinjamController@pinjamhapus');
 Route::put('/pinjam/edit/{id_pinjam}', 'PinjamController@pinjamedit');
 
+
+Auth::routes();
+
+// Route::get('home', [App\Http\Controllers\HomeController::class, 'layout.app'])->name('home');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/logout', function(){return view('welcome');});
