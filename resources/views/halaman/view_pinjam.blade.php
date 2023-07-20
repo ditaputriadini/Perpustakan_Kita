@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('title', 'Peminjaman')
-@include('menu')
 @section('content')
+@include('menu')
     <h3><center>Data Peminjaman Buku</center><h3>
     <h3><center>IT Telkom Library</center></h3>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPinjamTambah">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPinjamTambah">
         Tambah Data Peminjaman
     </button>
 
@@ -104,7 +104,7 @@
 
                                             <p>
                                             <div class="modal-footer">
-                                                <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                                                 <button type="submit" name="pinjamtambah" class="btn btn-success">Edit</button>
                                             </div>
                                         </form>
@@ -184,7 +184,7 @@
 
                         <p>
                         <div class="modal-footer">
-                            <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" name="pinjamtambah" class="btn btn-success">Tambah</button>
                         </div>
                     </form>

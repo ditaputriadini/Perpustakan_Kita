@@ -12,7 +12,7 @@ class PetugasController extends Controller
     //method untuk tampil data Petugas
     public function petugastampil()
     {
-        $datapetugas = PetugasModel::orderby('id_petugas', 'ASC')
+        $datapetugas = PetugasModel::orderby('nama_petugas', 'ASC')
         ->paginate(5);
 
         return view('halaman/view_petugas',['petugas'=>$datapetugas]);

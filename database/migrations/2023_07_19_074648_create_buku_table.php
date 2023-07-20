@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('judul');
             $table->string('pengarang');
             $table->string('kategori');
-            $table->timestamp();
+            $table->timestamp('created_at');
+            $table->datetime('updated_at');
         });
     }
 

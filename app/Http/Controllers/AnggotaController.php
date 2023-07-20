@@ -12,10 +12,10 @@ class AnggotaController extends Controller
     //method untuk tampil data anggota
     public function anggotatampil()
     {
-        $dataanggota = AnggotaModel::orderby('id_anggota', 'ASC')
+        $dataanggota = AnggotaModel::orderby('nim', 'ASC')
         ->paginate(5);
 
-        return view('halaman/view_anggota',['anggota'=>$dataanggota]);
+        return view('halaman.view_anggota',['anggota'=>$dataanggota]);
     }
 
     //method untuk tambah data anggota

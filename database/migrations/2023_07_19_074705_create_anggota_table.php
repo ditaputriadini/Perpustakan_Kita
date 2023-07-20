@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('nama_anggota');
             $table->string('prodi');
             $table->string('hp');
-            $table->timestamp();
+            $table->timestamp('created_at');
+            $table->datetime('updated_at');
         });
     }
 

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Petugas')
-@include('menu')
 @section('content')
+@include('menu')
     <h3><center>Daftar Petugas Perpustakaan Universitas Semarang</center></h3>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPetugasTambah">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPetugasTambah">
         Tambah Data Petugas
     </button>
 
@@ -61,8 +61,8 @@
 
                                             <p>
                                             <div class="modal-footer">
-                                                <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                                <button type="submit" name="petugastambah" class="btn btn-success">Edit</button>
+                                                <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                                <button type="submit" name="bukutambah" class="btn btn-success">Edit</button>
                                             </div>
                                         </form>
                                     </div>
@@ -117,7 +117,7 @@
 
                         <p>
                         <div class="modal-footer">
-                            <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" name="petugastambah" class="btn btn-success">Tambah</button>
                         </div>
                     </form>

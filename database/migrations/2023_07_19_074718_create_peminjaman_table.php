@@ -16,7 +16,8 @@ return new class extends Migration
             $table->foreignId('id_petugas');
             $table->foreignId('id_anggota');
             $table->foreignId('id_buku');
-            $table->timestamp();
+            $table->timestamp('created_at');
+            $table->datetime('updated_at');
         });
     }
 

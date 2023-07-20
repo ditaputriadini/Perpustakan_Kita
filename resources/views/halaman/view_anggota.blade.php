@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Anggota')
-@include('menu')
 @section('content')
-    <h3><center>Daftar Anggota Perpustakaan Universitas Semarang</center></h3>
+@include('menu')
+    <h3><center>Daftar Anggota Perpustakaan Kita</center></h3>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAnggotaTambah">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAnggotaTambah">
         Tambah Data anggota
     </button>
 
@@ -81,7 +81,7 @@
 
                                             <p>
                                             <div class="modal-footer">
-                                                <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                                                 <button type="submit" name="anggotatambah" class="btn btn-success">Edit</button>
                                             </div>
                                         </form>
@@ -153,7 +153,7 @@
 
                         <p>
                         <div class="modal-footer">
-                            <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" name="anggotatambah" class="btn btn-success">Tambah</button>
                         </div>
                     </form>
