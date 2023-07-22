@@ -49,3 +49,7 @@ Auth::routes();
 // Route::get('home', [App\Http\Controllers\HomeController::class, 'layout.app'])->name('home');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', function(){return view('welcome');});
+
+Route::get('exportExcel', [BukuController::class, 'exportExcel'])->name('buku.exportExcel');
+
+Route::get('exportPdf', [BukuController::class, 'exportPdf'])->name('buku.exportPdf');

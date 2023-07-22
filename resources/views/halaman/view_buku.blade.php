@@ -3,11 +3,27 @@
 @section('title', 'Buku')
 @section('content')
 @include('menu')
-    <h3><center>Daftar Buku Perpustakaan Universitas Semarang</center></h3>
+    <h3><center>Daftar Buku Perpustakaan Kita</center></h3>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBukuTambah">
         Tambah Data Buku
     </button>
+
+
+    <li class="list-inline-item">
+        <a href="{{ route('buku.exportExcel') }}" class="btn btn-outline-success">
+            <i class="bi bi-download me-1"></i> to Excel
+        </a>
+    </li>
+    
+
+    <li class="list-inline-item">
+        <a href="{{ route('buku.exportPdf') }}" class="btn btn-outline-danger">
+            <i class="bi bi-download me-1"></i> to PDF
+        </a>
+    </li>
+
+
 
     <p>
     <table class="table table-bordered table-striped">

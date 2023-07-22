@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\BukuModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Buku>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
 class BukuFactory extends Factory
 {
@@ -17,13 +17,7 @@ class BukuFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => fake()->idBuku(),
-            'kode_buku' => fake()->kodeBuku(),
-            'judul' => fake()->judul(),
-            'pengarang' => fake()->pengarang(),
-            'kategori' => fake()->kategori(),
-            'created_at' => fake()->createdAt(),
-            'updated_at' => fake()->updatedAt(),
+            //
         ];
     }
 }
