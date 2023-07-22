@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\BukuExport;
+use PDF;
+
 
 //panggil model BukuModel
 use App\Models\BukuModel;
@@ -66,5 +70,20 @@ class BukuController extends Controller
         $id_buku->save();
 
         return redirect()->back();
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new BukuExport, 'buku.xlsx');
+    }
+
+
+    public function exportPdf()
+    {
+        $buku = Buku::all();
+
+        $pdf = PDF::loadView('buku.export_pdf', compact('buku'));
+
+        return $pdf->download('buku.pdf');
     }
 }
