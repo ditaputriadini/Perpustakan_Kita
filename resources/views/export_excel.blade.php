@@ -6,7 +6,7 @@
             <th>Judul</th>
             <th>Pengarang</th>
             <th>Kategori</th>
-            
+
         </tr>
     </thead>
     <tbody>

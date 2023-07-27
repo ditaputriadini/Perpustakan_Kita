@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-<h3>Pengertian perpustakaan menurut para ahli</h3>
+    {{-- </div> --}}
+{{-- <h3>Pengertian perpustakaan menurut para ahli</h3>
     <p>
     <h4>Perpustakaan</h4>
         Perpustakaan Perguruan Tinggi merupakan unit kerja pelaksana teknis (UPT) Perguruan Tinggi yang bersama-sama
@@ -44,7 +44,28 @@
     <p>
     <h4>Perpustakaan Menurut UU NO 43. THN. 2007</h4>
     Perpustakaan adalah institusi yang mengumpulkan pengetahuan tercetak dan terekam, mengelolanya dengan cara khusus guna
-    memenuhi kebutuhan intelektualitas para penggunanya melalui berbagai cara interaksi pengetahuan.
+    memenuhi kebutuhan intelektualitas para penggunanya melalui berbagai cara interaksi pengetahuan. --}}
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ asset('gambar/slide1.jpg') }}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('gambar/slide2.jpg') }}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('gambar/slide3.jpg') }}"class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 </div>
 
 @endsection

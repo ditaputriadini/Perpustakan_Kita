@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BukuController;
+// use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +25,9 @@ Route::post('/buku/tambah','BukuController@bukutambah');
 Route::get('/buku/hapus/{id_buku}','BukuController@bukuhapus');
 Route::put('/buku/edit/{id_buku}', 'BukuController@bukuedit');
 
-//Route untuk Data Buku
+//Route untuk tampilan home
 Route::get('/home', function(){return view('home');});
+// ->middleware("auth")
 
 //Route untuk Data Anggota
 Route::get('/anggota', 'AnggotaController@anggotatampil');
@@ -46,10 +50,7 @@ Route::put('/pinjam/edit/{id_pinjam}', 'PinjamController@pinjamedit');
 
 Auth::routes();
 
-// Route::get('home', [App\Http\Controllers\HomeController::class, 'layout.app'])->name('home');
+// Route::get('/home', [HomeController::class, 'l'])->name('home');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', function(){return view('welcome');});
-
 Route::get('exportExcel', [BukuController::class, 'exportExcel'])->name('buku.exportExcel');
-
 Route::get('exportPdf', [BukuController::class, 'exportPdf'])->name('buku.exportPdf');

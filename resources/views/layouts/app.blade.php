@@ -29,9 +29,6 @@
         <main class="py-5">
             @yield('content')
         </main>
-        {{-- {{-- @include('menu') --}}
-        {{-- @include('konten')
-        @include('footer') --}}
     </div>
 </body>
 </html>

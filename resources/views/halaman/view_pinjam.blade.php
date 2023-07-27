@@ -5,6 +5,7 @@
     <h3><center>Data Peminjaman Buku</center><h3>
     <h3><center>IT Telkom Library</center></h3>
 
+    <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPinjamTambah">
         Tambah Data Peminjaman
     </button>

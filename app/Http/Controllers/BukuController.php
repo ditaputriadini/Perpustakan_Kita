@@ -80,9 +80,9 @@ class BukuController extends Controller
 
     public function exportPdf()
     {
-        $buku = Buku::all();
+        $buku = BukuModel::all();
 
-        $pdf = PDF::loadView('buku.export_pdf', compact('buku'));
+        $pdf = PDF::loadView('export_pdf', compact('buku'));
 
         return $pdf->download('buku.pdf');
     }
