@@ -20,8 +20,9 @@ class BukuExport implements FromView, WithStyles, ShouldAutoSize
 
     public function view(): View
     {
-        return view('buku.export_excel', [
-            'buku' => Buku::all()
+        return view('export_excel', [
+            'buku' => BukuModel::all()
         ]);
     }
+
 }

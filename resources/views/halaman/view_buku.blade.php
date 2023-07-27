@@ -3,8 +3,10 @@
 @section('title', 'Buku')
 @section('content')
 @include('menu')
-    <h3><center>Daftar Buku Perpustakaan Kita</center></h3>
+<h3><center>Data Buku</center><h3>
+    <h3><center>IT Telkom Library</center></h3>
 
+    <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBukuTambah">
         Tambah Data Buku
     </button>
@@ -15,7 +17,7 @@
             <i class="bi bi-download me-1"></i> to Excel
         </a>
     </li>
-    
+
 
     <li class="list-inline-item">
         <a href="{{ route('buku.exportPdf') }}" class="btn btn-outline-danger">
@@ -50,11 +52,53 @@
                     <td>{{$bk->kategori}}</td>
                     <td align="center">
 
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalBukuEdit{{$bk->id_buku}}">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalBukuEdit{{$bk->id_buku}}">
                             Edit
                         </button>
                         <!-- Awal Modal EDIT data Buku -->
-                        <div class="modal fade" id="modalBukuEdit{{$bk->id_buku}}" tabindex="-1" role="dialog" aria-labelledby="modalBukuEditLabel" aria-hidden="true">
+
+                        <div class="modal fade" id="modalBukuEdit{{$bk->id_buku}}" tabindex="-1" aria-labelledby="modalBukuEditLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalBukuEditLabel">Form Edit Data Buku</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form name="formbukuedit" id="formbukuedit" action="/buku/edit/{{ $bk->id_buku }} " method="post" enctype="multipart/form-data">
+                                            @csrf
+                                            {{ method_field('PUT') }}
+                                            <div class="mb-3">
+                                                <label for="kode_buku" class="form-label">Kode Buku</label>
+                                                <input type="text" class="form-control" id="kode_buku" name="kode_buku" placeholder="Masukan Kode Buku">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="judul" class="form-label">Judul Buku</label>
+                                                <input type="text" class="form-control" id="judul" name="judul" value="{{ $bk->judul }}">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="pengarang" class="form-label">Nama Pengarang</label>
+                                                <input type="text" class="form-control" id="pengarang" name="pengarang" value="{{ $bk->pengarang }}">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="kategori" class="form-label">Kategori</label>
+                                                <input type="text" class="form-control" id="kategori" name="kategori" value="{{ $bk->kategori }}">
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                                <button type="submit" name="bukutambah" class="btn btn-success">Edit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- <div class="modal fade" id="modalBukuEdit{{$bk->id_buku}}" tabindex="-1" role="dialog" aria-labelledby="modalBukuEditLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -105,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- Akhir Modal EDIT data buku -->
                         |
                         <a href="buku/hapus/{{$bk->id_buku}}" onclick="return confirm('Yakin mau dihapus?')">
@@ -392,5 +436,5 @@
         </div>
     </div> --}}
     <!-- Akhir Modal tambah data buku -->
-
+</div>
 @endsection

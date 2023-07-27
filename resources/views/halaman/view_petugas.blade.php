@@ -2,8 +2,10 @@
 @section('title', 'Petugas')
 @section('content')
 @include('menu')
-    <h3><center>Daftar Petugas Perpustakaan Universitas Semarang</center></h3>
+<h3><center>Data Petugas</center><h3>
+    <h3><center>IT Telkom Library</center></h3>
 
+    <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPetugasTambah">
         Tambah Data Petugas
     </button>
@@ -126,5 +128,5 @@
         </div>
     </div>
     <!-- Akhir Modal tambah data buku -->
-
+    </div>
 @endsection

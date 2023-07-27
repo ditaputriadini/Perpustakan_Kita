@@ -2,8 +2,10 @@
 @section('title', 'Anggota')
 @section('content')
 @include('menu')
-    <h3><center>Daftar Anggota Perpustakaan Kita</center></h3>
+<h3><center>Data Anggota </center><h3>
+    <h3><center>IT Telkom Library</center></h3>
 
+    <div class="container">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAnggotaTambah">
         Tambah Data anggota
     </button>

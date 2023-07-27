@@ -29,15 +29,13 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <img src="{{asset('gambar')}}/logo.png" width="150%" height="500px">
                 </div >
-                <div class="container">
-                              <a class="btn btn-light padding-left:40px;" href="{{ route('login') }}" role="button">Log in</a>
-                            {{-- <button type="button" href="{{ route('login') }}" class="btn btn-light text-center" >Log in</button> --}}
-                            {{-- <div class="ml-15 text-lg leading-25 font-semibold"><a href="{{ route('login') }}"  class="center text-gray-900 dark:text-gray">Log in</a></div> --}}
-                            </div>
-                            </div >
-                        </div>
-                    </div>
+                {{-- <div class ="container">
+                    <a class ="btn btn-light padding-left:40px;" href="{{ route('login') }}" role="button">Log in</a>
+                </div> --}}
+                <div class="container d-flex justify-content-center">
+                    <a class="btn btn-light" href="{{ route('login') }}" role="button">Log in</a>
                 </div>
+
             </div>
         </div>
     </body>
