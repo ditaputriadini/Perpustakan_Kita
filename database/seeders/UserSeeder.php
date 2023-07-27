@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -17,16 +18,15 @@ class UserSeeder extends Seeder
             User::create([
                 'name' => 'administrator',
                 'email' => 'admin@admin.com',
-                'password' =>bcrypt('admin')
+                'password' => Hash::make('admin')
             // Menggunakan Hash::make untuk mengenkripsi password
             ]);
-
-            // User::create([
-            //     'name' => 'Jane Smith',
-            //     'email' => 'jane@example.com',
-            // //     'password' => Hash::make('secret456'),
-            // ]);
-
-            // Anda dapat menambahkan data pengguna lainnya sesuai kebutuhan
-        }
+            // Verifikasi kata sandi saat pengguna mencoba masuk
+            $email = 'admin@admin.com';
+            if (Hash::check($email,$password)) {
+             }
+             else {
+              // Kata sandi tidak cocok, tolak akses
+              }
+            }
 }

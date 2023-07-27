@@ -26,7 +26,8 @@ Route::get('/buku/hapus/{id_buku}','BukuController@bukuhapus');
 Route::put('/buku/edit/{id_buku}', 'BukuController@bukuedit');
 
 //Route untuk tampilan home
-Route::get('/home', function(){return view('home');})->middleware("auth");
+Route::get('/home', function(){return view('home');});
+// ->middleware("auth")
 
 //Route untuk Data Anggota
 Route::get('/anggota', 'AnggotaController@anggotatampil');
@@ -51,6 +52,5 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'l'])->name('home');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', function(){return view('welcome');});
 Route::get('exportExcel', [BukuController::class, 'exportExcel'])->name('buku.exportExcel');
 Route::get('exportPdf', [BukuController::class, 'exportPdf'])->name('buku.exportPdf');
