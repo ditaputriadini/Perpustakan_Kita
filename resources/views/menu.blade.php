@@ -22,10 +22,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/pinjam">Data Peminjaman</a>
                 </li>
-
+{{--
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a>
-                </li>
+                </li> --}}
+                <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+                    @csrf
+                    {{-- @method('DELETE') --}}
+                    <button class="btn btn-danger">Logout</button>
+                </form>
+
             </ul>
         </div>
     </nav>

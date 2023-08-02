@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('kategori');
             $table->timestamp('created_at');
-            $table->datetime('updated_at');
+          // $table->datetime('updated_at');
+            $table->datetime('updated_at')->default(now());
         });
     }
 
