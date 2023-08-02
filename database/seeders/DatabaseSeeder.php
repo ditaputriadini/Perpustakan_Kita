@@ -20,8 +20,6 @@ class DatabaseSeeder extends Seeder
 
         // ]);
 
-        $this->call([
-            BukuSeeder::class,
-        ]);
+        $this->call(BukuSeeder::class);
     }
 }

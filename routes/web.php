@@ -47,10 +47,18 @@ Route::post('/pinjam/tambah','PinjamController@pinjamtambah');
 Route::get('/pinjam/hapus/{id_pinjam}','PinjamController@pinjamhapus');
 Route::put('/pinjam/edit/{id_pinjam}', 'PinjamController@pinjamedit');
 
-
-Auth::routes();
-
-// Route::get('/home', [HomeController::class, 'l'])->name('home');
-Route::post('/login', [LoginController::class, 'authenticate']);
+// Route dom karavel package
 Route::get('exportExcel', [BukuController::class, 'exportExcel'])->name('buku.exportExcel');
 Route::get('exportPdf', [BukuController::class, 'exportPdf'])->name('buku.exportPdf');
+
+// Auth::routes();
+Route::group(['middleware'=>'guest'], function (){
+Route::Post('/login', [LoginController::class, 'authenticate'])->name('login');;
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+});
+
+Route::group(['middleware'=>'auth'], function (){
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+});
