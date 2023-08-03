@@ -32,7 +32,7 @@
                     <td>{{$p->anggota->nama_anggota}}</td>
                     <td>{{$p->buku->judul}}</td>
                     <td align="center">
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPinjamEdit{{$p->id_pinjam}}">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalPinjamEdit{{$p->id_pinjam}}">
                             Edit
                         </button>
 

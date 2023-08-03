@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(BukuSeeder::class);
+        $this->call(AnggotaSeeder::class);
+        $this->call(PetugasSeeder::class);
+        $this->call(PeminjamanSeeder::class);
     }
 }
