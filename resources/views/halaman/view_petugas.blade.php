@@ -31,7 +31,7 @@
                     <td>{{$p->hp}}</td>
                     <td align="center">
 
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPetugasEdit{{$p->id_petugas}}">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalPetugasEdit{{$p->id_petugas}}">
                             Edit
                         </button>
                          <!-- Awal Modal EDIT data petugas -->
