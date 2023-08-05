@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 // use App\Models\BukuModel;
 // use App\Models\PetugasModel;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PinjamExport;
+use PDF;
 
 //memanggil model PinjamModel
 use App\Models\PinjamModel;
@@ -76,5 +79,10 @@ class PinjamController extends Controller
         $id_pinjam->save();
 
         return redirect()->back();
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new PinjamExport, 'pinjam.xlsx');
     }
 }

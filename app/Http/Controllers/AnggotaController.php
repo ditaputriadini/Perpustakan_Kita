@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\AnggotaExport;
+use PDF;
 
 //panggil model BukuModel
 use App\Models\AnggotaModel;
@@ -66,5 +69,10 @@ class AnggotaController extends Controller
         $id_anggota->save();
 
         return redirect()->back();
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new AnggotaExport, 'anggota.xlsx');
     }
 }
