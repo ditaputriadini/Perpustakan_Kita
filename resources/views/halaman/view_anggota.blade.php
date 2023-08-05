@@ -10,6 +10,20 @@
         Tambah Data anggota
     </button>
 
+    <li class="list-inline-item">
+        <a href="{{ route('anggota.exportExcel') }}" class="btn btn-outline-success">
+            <i class="bi bi-download me-1"></i> to Excel
+        </a>
+    </li>
+
+
+    <li class="list-inline-item">
+        <a href="{{ route('buku.exportPdf') }}" class="btn btn-outline-danger">
+            <i class="bi bi-download me-1"></i> to PDF
+        </a>
+    </li>
+
+
     <p>
     <table class="table table-bordered table-striped">
         <thead>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PetugasExport;
+use PDF;
 
 //panggil model Petugas
 use App\Models\PetugasModel;
@@ -58,5 +61,10 @@ class PetugasController extends Controller
         $id_petugas->save();
 
         return redirect()->back();
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new PetugasExport, 'petugas.xlsx');
     }
 }
