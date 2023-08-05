@@ -75,4 +75,13 @@ class AnggotaController extends Controller
     {
         return Excel::download(new AnggotaExport, 'anggota.xlsx');
     }
+
+    public function exportPdf()
+    {
+        $anggota = AnggotaModel::all();
+
+        $pdf = PDF::loadView('export_pdf', compact('anggota'));
+
+        return $pdf->download('anggota.pdf');
+    }
 }

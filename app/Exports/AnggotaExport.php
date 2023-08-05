@@ -34,8 +34,8 @@ class AnggotaExport implements FromCollection, WithHeadings
 
     public function createPDF()
     {
-        $pdf = PDF::loadView('exports.buku', ['data' => $this->collection()]);
-        return $pdf->download('buku.pdf');
+        $pdf = PDF::loadView('exports.anggota', ['data' => $this->collection()]);
+        return $pdf->download('anggota.pdf');
     }
 }
 // class BukuExport implements FromView, WithStyles, ShouldAutoSize

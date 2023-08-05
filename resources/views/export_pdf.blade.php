@@ -27,24 +27,29 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Kode Buku</th>
-                <th>Judul</th>
-                <th>Pengarang</th>
-                <th>Kategori</th>
+                <th>id_buku</th>
+                <th>kode_buku</th>
+                <th>judul</th>
+                <th>pengarang</th>
+                <th>kategori</th>
+                <th>created_at</th>
+                <th>updated_at</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($buku as $index => $buku)
-                <tr>
-                    <td align="center">{{ $index + 1 }}</td>
-                    <td>{{ $buku->Kode_Buku}}</td>
-                    <td>{{ $buku->Judul }}</td>
-                    <td>{{ $buku->Pengarang }}</td>
-                    <td>{{ $buku->Kategori }}</td>
-                </tr>
+            @foreach($buku as $index => $buku)
+            <tr>
+                <td>{{ $buku->id_buku }}</td>
+                <td>{{ $buku->kode_buku }}</td>
+                <td>{{ $buku->judul }}</td>
+                <td>{{ $buku->pengarang }}</td>
+                <td>{{ $buku->kategori }}</td>
+                <td>{{ $buku->created_at }}</td>
+                <td>{{ $buku->updated_at }}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
 </body>
 </html>
+

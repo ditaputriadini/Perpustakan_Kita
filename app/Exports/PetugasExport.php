@@ -32,8 +32,8 @@ class PetugasExport implements FromCollection, WithHeadings
 
     public function createPDF()
     {
-        $pdf = PDF::loadView('exports.buku', ['data' => $this->collection()]);
-        return $pdf->download('buku.pdf');
+        $pdf = PDF::loadView('exports.petugas', ['data' => $this->collection()]);
+        return $pdf->download('petugas.pdf');
     }
 }
 // class BukuExport implements FromView, WithStyles, ShouldAutoSize

@@ -85,4 +85,13 @@ class PinjamController extends Controller
     {
         return Excel::download(new PinjamExport, 'pinjam.xlsx');
     }
+
+    public function exportPdf()
+    {
+        $pinjam = PetugasModel::all();
+
+        $pdf = PDF::loadView('export_pdf', compact('petugas'));
+
+        return $pdf->download('petugas.pdf');
+    }
 }
