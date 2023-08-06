@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Buku</title>
+    <title>Data Anggota</title>
     <style>
         html {
             font-size: 12px;
@@ -23,29 +23,29 @@
     </style>
 </head>
 <body>
-    <h1>Data Buku</h1>
+    <h1>Data Anggota</h1>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>id_buku</th>
-                <th>kode_buku</th>
-                <th>judul</th>
-                <th>pengarang</th>
-                <th>kategori</th>
+                <th>id_anggota</th>
+                <th>nim</th>
+                <th>nama_anggota</th>
+                <th>prodi</th>
+                <th>hp</th>
                 <th>created_at</th>
                 <th>updated_at</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($buku as $index => $buku)
+            @foreach($anggota as $index => $anggota)
             <tr>
-                <td>{{ $buku->id_buku }}</td>
-                <td>{{ $buku->kode_buku }}</td>
-                <td>{{ $buku->judul }}</td>
-                <td>{{ $buku->pengarang }}</td>
-                <td>{{ $buku->kategori }}</td>
-                <td>{{ $buku->created_at }}</td>
-                <td>{{ $buku->updated_at }}</td>
+                <td>{{ $anggota->id_anggota }}</td>
+                <td>{{ $anggota->nim }}</td>
+                <td>{{ $anggota->nama_anggota }}</td>
+                <td>{{ $anggota->prodi }}</td>
+                <td>{{ $anggota->hp }}</td>
+                <td>{{ $anggota->created_at }}</td>
+                <td>{{ $anggota->updated_at }}</td>
             </tr>
             @endforeach
         </tbody>

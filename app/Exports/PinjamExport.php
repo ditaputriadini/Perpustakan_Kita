@@ -33,8 +33,8 @@ class PinjamExport implements FromCollection, WithHeadings
 
     public function createPDF()
     {
-        $pdf = PDF::loadView('exports.buku', ['data' => $this->collection()]);
-        return $pdf->download('buku.pdf');
+        $pdf = PDF::loadView('exports.pinjam', ['data' => $this->collection()]);
+        return $pdf->download('pinjam.pdf');
     }
 }
 // class BukuExport implements FromView, WithStyles, ShouldAutoSize

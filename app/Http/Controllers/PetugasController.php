@@ -67,4 +67,13 @@ class PetugasController extends Controller
     {
         return Excel::download(new PetugasExport, 'petugas.xlsx');
     }
+
+    public function exportPdf()
+    {
+        $petugas = PetugasModel::all();
+
+        $pdf = PDF::loadView('export_pdf_petugas', compact('petugas'));
+
+        return $pdf->download('petugas.pdf');
+    }
 }

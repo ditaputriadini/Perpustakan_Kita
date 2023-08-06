@@ -85,4 +85,13 @@ class PinjamController extends Controller
     {
         return Excel::download(new PinjamExport, 'pinjam.xlsx');
     }
+
+    public function exportPdf()
+    {
+        $pinjam = PinjamModel::all();
+
+        $pdf = PDF::loadView('export_pdf_pinjam', compact('pinjam'));
+
+        return $pdf->download('pinjam.pdf');
+    }
 }
