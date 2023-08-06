@@ -6,7 +6,8 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\PinjamController;
-// use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,12 @@ use App\Http\Controllers\PinjamController;
 |
 */
 
-Route::middleware('auth')->group(function () {
+
 
     Route::get('/', function () {
         return view('welcome');
     });
+Route::middleware('auth')->group(function () {
     //Route untuk Data Buku
     Route::get('/buku', 'BukuController@bukutampil');
     Route::post('/buku/tambah','BukuController@bukutambah');
