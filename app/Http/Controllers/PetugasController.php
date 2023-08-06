@@ -72,7 +72,7 @@ class PetugasController extends Controller
     {
         $petugas = PetugasModel::all();
 
-        $pdf = PDF::loadView('export_pdf', compact('petugas'));
+        $pdf = PDF::loadView('export_pdf_petugas', compact('petugas'));
 
         return $pdf->download('petugas.pdf');
     }

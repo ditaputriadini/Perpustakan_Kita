@@ -18,7 +18,7 @@
 
 
     <li class="list-inline-item">
-        <a href="{{ route('buku.exportPdf') }}" class="btn btn-outline-danger">
+        <a href="{{ route('anggota.exportPdf') }}" class="btn btn-outline-danger">
             <i class="bi bi-download me-1"></i> to PDF
         </a>
     </li>

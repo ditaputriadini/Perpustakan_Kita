@@ -88,10 +88,10 @@ class PinjamController extends Controller
 
     public function exportPdf()
     {
-        $pinjam = PetugasModel::all();
+        $pinjam = PinjamModel::all();
 
-        $pdf = PDF::loadView('export_pdf', compact('petugas'));
+        $pdf = PDF::loadView('export_pdf_pinjam', compact('pinjam'));
 
-        return $pdf->download('petugas.pdf');
+        return $pdf->download('pinjam.pdf');
     }
 }
